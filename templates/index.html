@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Watermarking App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="gradient-bg">
+        <div class="form-card">
+            <h2>Image Watermarking App</h2>
+            <p>Add watermark to your images with ease</p>
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <label for="image">Upload Image:</label>
+                <input type="file" name="image" id="image" required>
+                
+                <label for="watermark_text">Watermark Text:</label>
+                <input type="text" name="watermark_text" id="watermark_text" placeholder="Enter watermark text" required>
+                
+                <button type="submit">Upload and Watermark</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
